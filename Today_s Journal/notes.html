@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>My notes | Tabtrac</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="notes.css" type="text/css" media="all" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+    <!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+ <script>
+  // Initialize Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyAX9OhxfjY2vAFJTYvqocHb__sVuOrCyIU",
+  authDomain: "thee-real.firebaseapp.com",
+  projectId: "thee-real",
+  storageBucket: "thee-real.appspot.com",
+  messagingSenderId: "514391345424",
+  appId: "1:514391345424:web:a068a3a4d401878b5cbd95",
+  measurementId: "G-ZZL9K9S00M"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+  </head>
+  <body>
+    <nav>
+      <div class="details">
+        <img src="grid.png" alt="" />
+        <div>
+          <h4 id="fullname">Mahdi Jalili</h4>
+          <p id="email">mahdijalili.uix@gmail.com</p>
+        </div>
+      </div>
+       <div class="searchbar">
+        <span class="material-symbols-outlined">
+search
+</span>
+        <input type="text" name="search" id="filterInput" placeholder="Search anything...">
+      </div>
+      <div class="others">
+        <button id="refresh"><span class="material-symbols-outlined">
+autorenew
+</span></button>
+<a href="new-note.html"><span class="material-symbols-outlined">
+add_box
+</span></a>
+      </div>
+    </nav>
+    
+    <main>
+       <div id="notes">
+      <div class="notes-intro">
+        <h2>All notes</h2>
+        <p id="noteCount">4 Notes</p>
+      </div>
+      <div id="noteContainer"></div>
+    </div>
+    <div class="ad">
+      
+    </div>
+    </main>
+
+<script src="notes.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

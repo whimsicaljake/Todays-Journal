@@ -1,0 +1,113 @@
+
+:root {
+  /* Xanthous: Represents warmth, energy, and optimism */
+  --xanthous: #ffb93eff; /* Pale yellow */
+  
+  /* Wenge: Provides stability, sophistication, and timelessness */
+  --wenge: #5e4b4aff; /* Dark brown */
+  
+  /* Shamrock Green: Evokes tranquility, freshness, and harmony */
+  --shamrock-green: #009345ff; /* Light green */
+  
+  /* Silver: Symbolizes neutrality, balance, and modernity */
+  --silver: #cac4bcff; /* Light gray */
+  
+  /* Isabelline: Conveys subtlety, comfort, and clarity */
+  --isabelline: #f0efecff; /* Off-white */
+  
+  /* Jet: Offers depth, contrast, and seriousness */
+  --jet: #232926ff; /* Dark gray */
+  
+  /* Majorelle Blue: Represents inspiration, creativity, and depth */
+  --majorelle-blue: #555ae2ff; /* Medium blue */
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+   font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+body {
+  background: #fff7e9;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 2em;
+}
+nav img {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+}
+nav .details {
+  display: flex;
+  gap: .7em;
+}
+.searchbar {
+  background: #fff;
+  border-radius: 9999px;
+  height: 2em;
+  width: 26em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: .7em;
+  gap: 1em;
+}
+input {
+  border: none;
+  height: 3em;
+  width: 100%;
+}
+#notes {
+  width: 70%;
+}
+main {
+  display: flex;
+  gap: 4em;
+  padding: 5em;
+}
+.ad {
+  height: 80vh;
+  border-radius: 1em;
+  background: #fff;
+  width: 30%;
+}
+#noteContainer {
+  display: grid;
+  gap: 4em;
+  grid-template-columns: repeat(3, 1fr);
+}
+.note-list {
+  background: #ff9b73;
+  height: 13em;
+  width: 100%;
+  border-radius: 1em;
+  padding-inline: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-decoration: none;
+  color: var(--isabelline);
+}
+.note-list h1 {
+  font-weight: 400;
+}
+button {
+  border: none;
+  background: transparent;
+}
+.others {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  width: 25%;
+}
+nav a {
+  color: #222;
+}

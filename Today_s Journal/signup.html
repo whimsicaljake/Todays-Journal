@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Poppins&display=swap" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="sign-in-container">
+        <div class="sign-column s1">
+            <div class="sign-column-face s2">
+                <div class="s3">
+                    <div class="sign-header-section">
+                        <div class="sign-in-title">
+                            Sign Up
+                        </div>
+                        <div class="sign-in-title-alt">
+                            Journaling made easy with Today's Journal
+                        </div>
+                    </div>
+                    <form class="input-container" id="signUpForm">
+                        <input type="text" required placeholder="Full Name" id="fullName">
+                        <input type="email" required placeholder="Email" id="email">
+                        <input type="password" required placeholder="Password" id="password">
+                        <button type="submit" id="signUpButton">
+                            Sign up
+                        </button>
+                        <div href="#" class="alt-f-full">
+                            Already a Member ?
+                            <a href="login.html" class="alt-f">
+                                Sign in
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sign-column w2">
+            <div class="intro-p">
+                <div class="canvas-logo">
+                    <img src="https://images.unsplash.com/photo-1496200186974-4293800e2c20?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="logo">
+                </div>
+                <div class="intro-content">
+                    <div class="intro-title">
+                         Journaling made easy with Today's Journal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+             apiKey: "AIzaSyAX9OhxfjY2vAFJTYvqocHb__sVuOrCyIU",
+  authDomain: "thee-real.firebaseapp.com",
+  projectId: "thee-real",
+  storageBucket: "thee-real.appspot.com",
+  messagingSenderId: "514391345424",
+  appId: "1:514391345424:web:a068a3a4d401878b5cbd95",
+  measurementId: "G-ZZL9K9S00M"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Get references to form elements
+        const signUpForm = document.getElementById('signUpForm');
+        const fullNameInput = document.getElementById('fullName');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const signUpButton = document.getElementById('signUpButton');
+
+        // Disable button while sign-up is in progress
+        function disableButton() {
+            signUpButton.disabled = true;
+        }
+
+        // Enable button
+        function enableButton() {
+            signUpButton.disabled = false;
+        }
+
+      signUpForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fullName = fullNameInput.value;
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+    // Disable button during sign-up process
+    disableButton();
+
+    // Create user with email and password
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            // Store additional user information if needed
+            const user = userCredential.user;
+            // For example, store full name and user ID
+            firebase.firestore().collection('users').doc(user.uid).set({
+                fullName: fullName,
+                email: email,
+                uid: user.uid // Access user UID directly from user object
+                // Add more fields as needed
+            })
+            .then(() => {
+                // Sign-up successful, enable button
+                enableButton();
+                // Redirect or perform necessary actions
+                console.log('User signed up successfully!');
+            })
+            .catch((error) => {
+                // Handle errors in storing user data
+                console.error('Error storing user data:', error.message);
+                // Re-enable button in case of error
+                enableButton();
+            });
+        })
+        .catch((error) => {
+            // Handle errors in user sign-up
+            console.error('Error signing up user:', error.message);
+            // Re-enable button in case of error
+            enableButton();
+        });
+});
+    </script>
+</body>
+</html>

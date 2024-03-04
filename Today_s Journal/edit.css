@@ -1,0 +1,124 @@
+:root {
+  /* Xanthous: Represents warmth, energy, and optimism */
+  --xanthous: #ffb93eff; /* Pale yellow */
+  
+  /* Wenge: Provides stability, sophistication, and timelessness */
+  --wenge: #5e4b4aff; /* Dark brown */
+  
+  /* Shamrock Green: Evokes tranquility, freshness, and harmony */
+  --shamrock-green: #009345ff; /* Light green */
+  
+  /* Silver: Symbolizes neutrality, balance, and modernity */
+  --silver: #cac4bcff; /* Light gray */
+  
+  /* Isabelline: Conveys subtlety, comfort, and clarity */
+  --isabelline: #f0efecff; /* Off-white */
+  
+  /* Jet: Offers depth, contrast, and seriousness */
+  --jet: #232926ff; /* Dark gray */
+  
+  /* Majorelle Blue: Represents inspiration, creativity, and depth */
+  --majorelle-blue: #555ae2ff; /* Medium blue */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+*:focus {
+  outline: none;
+}
+
+header {
+    background-color: var(--majorelle-blue);
+    color: #fff;
+   height: 15em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    text-align: center;
+    background-size: cover;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+#headerImageContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#headerImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#contentEditor {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 200px;
+    margin-bottom: 20px;
+}
+
+#saveButton {
+    background-color: var(--jet);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#saveButton:hover {
+    background-color: var(--wenge);
+}
+#header {
+  position: relative;
+}
+#imageInput {
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+}
+#description {
+  text-align: center;
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+.success-message {
+  height: 8em;
+  width: 15em;
+  background: #fff;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade 1s linear 1;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: fixed;
+  bottom: 2em;
+  left: 2em;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+ #description {
+  text-align: center;
+  padding-left: 4em;
+  padding-right: 4em;
+}
+}

@@ -1,0 +1,365 @@
+
+:root {
+  /* Xanthous: Represents warmth, energy, and optimism */
+  --xanthous: #ffb93eff; /* Pale yellow */
+  
+  /* Wenge: Provides stability, sophistication, and timelessness */
+  --wenge: #5e4b4aff; /* Dark brown */
+  
+  /* Shamrock Green: Evokes tranquility, freshness, and harmony */
+  --shamrock-green: #009345ff; /* Light green */
+  
+  /* Silver: Symbolizes neutrality, balance, and modernity */
+  --silver: #cac4bcff; /* Light gray */
+  
+  /* Isabelline: Conveys subtlety, comfort, and clarity */
+  --isabelline: #f0efecff; /* Off-white */
+  
+  /* Jet: Offers depth, contrast, and seriousness */
+  --jet: #232926ff; /* Dark gray */
+  
+  /* Majorelle Blue: Represents inspiration, creativity, and depth */
+  --majorelle-blue: #555ae2ff; /* Medium blue */
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+   font-family: "Madimi One", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4em;
+ padding-left: 3em;
+ padding-right: 3em;
+}
+nav .logo, em {
+  color: var(--majorelle-blue);
+}
+nav h1 {
+  margin: 0 !important;
+}
+nav .cta {
+  color: var(--color-3);
+  background: var(--xanthous);
+  height: 2.5em;
+  width: 8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: .4em;
+}
+li {
+  list-style: none;
+}
+nav .links ul {
+  display: flex;
+   align-items: center;
+  gap: 1em;
+}
+ul li a {
+  text-decoration: none;
+  color: #222;
+}
+header {
+  height: 100vh;
+}
+header main {
+  display: flex;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 5em;
+  gap: 2em;
+}
+main div {
+  width: 100%;
+}
+main p {
+  color: var(--wenge);
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+main h1 {
+  font-size: 3em;
+}
+main img {
+  width: 90%;
+}
+main a, .href {
+  text-decoration: none;
+  background: var(--xanthous);
+  color: var(--isabelline);
+  height: 2.5em;
+  width: 8em;
+  border-radius: .4em;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+h1 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+h1 span {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px; /* Adjust space between text and line */
+}
+
+h1 span::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust the position of the curve */
+  left: 50%;
+  width: 100px; /* Adjust the width of the line */
+  height: 5px; /* Adjust the thickness of the line */
+  background-color: var(--xanthous); /* Adjust color as needed */
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.highlight .grid {
+  display: flex;
+  padding: 7em;
+  gap: 2em;
+}
+.highlight h1 {
+  text-align: center !important;
+  width: 100%;
+  margin-top: 2em;
+}
+.grid .elements {
+  background: var(--isabelline);
+  padding: .5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Montserrat', Verdana;
+  border-radius: .3em;
+}
+.elements img {
+  width: 100%;
+  flex: 1;
+}
+.elements h2 {
+  font-weight: 100;
+}
+.elements p {
+  font-weight: 100;
+   font-family: 'Montserrat', Verdana;margin-top: .8em;
+}
+.one-key{
+  height: 22em;
+  padding-left: 4em;
+  padding-right: 4em;
+  background: var(--isabelline);
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.one-key div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.one-key img {
+  width: 80%;
+  height: 80%;
+}
+.one-key p {
+  margin-top: 2em;
+  padding-right: 4em;
+}
+
+
+
+
+
+.text-center {
+  text-align:center;
+  
+}
+
+
+.bg-color {
+  background: var(--silver);
+}
+
+.half-color-box {
+  background: var(--wenge);
+  height: 300px;
+  margin-bottom: 100px;
+  margin-top: 2em;
+}
+
+.text-whtie {
+  color: var(--wenge) !important;
+  padding: 2em;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.por {
+  position: relative;
+}
+
+.review-box .quote {
+  position: absolute;
+  width: 40px;
+  right: 10px;
+  bottom: 10px;
+}
+
+.test-arrowbox {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  top: 70px;
+  z-index: 10;
+}
+
+.review-box {
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.review-box h5 {
+  margin: 0;
+}
+
+.review-box p {
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #7d8597;
+}
+
+.user-post {
+  font-size: 14px;
+  margin: 0 !important;
+ 
+}
+
+.swiper-testimonial {
+  padding: 100px 20px;
+  padding-top: 30px;
+}
+
+.half-color-box {
+  background: var(--gradient);
+  height: 300px;
+  margin-bottom: 140px;
+}
+.swiper-wrapper{
+  margin-top: 4em;
+}
+
+.test-arrowbox .swiper-button-next-test,
+.test-arrowbox .swiper-button-prev-test {
+  margin-right: 20px;
+  /* background: var(--comp-color);2 */
+  border-radius: 50%;
+  --size: 55px;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-right {
+  transform: rotate(180deg);
+  margin-top: -8px;
+}
+
+.arrow {
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.arrow:hover {
+  transform: translateX(-15px);
+}
+
+footer {
+      background-color: var(--jet);
+      color: var(--silver);
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--isabelline);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: var(--shamrock-green);
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+  footer section {
+    margin-top: 1em;
+  }
+    .logo2 {
+      display: inline-block;
+      color: var(--xanthous);
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+@media only screen and (max-width: 768px) {
+  header {
+    height: auto;
+  }
+  header main {
+    flex-direction: column;
+    padding-left: 2em;
+  padding-right: 2em;
+  }
+  .mid-links {
+    display: none;
+  }
+  .grid {
+    flex-direction: column;
+    padding: 2em !important;
+  }
+  .one-key {
+    height: 110vh;
+    flex-direction: column-reverse;
+    padding-top: 4em;
+  }
+  .one-key img {
+    width: 95%;
+  }
+  .logo em {
+    display: none;
+  }
+  nav {
+    padding-left: 2em;
+ padding-right: 2em;
+  }
+  .rear-links {
+    display: flex;
+    align-items: center;
+  }
+}
